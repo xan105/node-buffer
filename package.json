@@ -1,6 +1,6 @@
 {
   "name": "@xan105/buffer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Additional Buffer manipulation",
   "type": "module",
   "exports": "./lib/index.js",
@@ -39,7 +39,7 @@
     "tap": "^15.1.6"
   },
   "dependencies": {
-    "@xan105/error": "^1.1.0",
-    "@xan105/is": "^2.1.1"
+    "@xan105/error": "^1.1.1",
+    "@xan105/is": "^2.1.2"
   }
 }
