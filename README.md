@@ -20,7 +20,9 @@ const chuncks = split(buffer, Buffer.from("ABCD",'hex'), { includeSeparator : tr
 Install
 =======
 
-`npm install @xan105/buffer`
+```
+npm install @xan105/buffer
+```
 
 API
 ===
