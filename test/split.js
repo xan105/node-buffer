@@ -1,4 +1,5 @@
 import t from 'tap';
+import { Buffer } from "node:buffer";
 import path from "node:path";
 import { readFile } from "node:fs/promises";
 import { split, splitIntoChuncks, indexOfNthOccurrence } from "../lib/index.js";
