@@ -34,6 +34,20 @@
     "url": "https://github.com/xan105/node-buffer/issues"
   },
   "homepage": "https://github.com/xan105/node-buffer#readme",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/xan105"
+    },
+    {
+      "type": "paypal",
+      "url": "https://www.paypal.me/xan105"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/xan105"
+    }
+  ],
   "devDependencies": {
     "eslint": "^8.9.0",
     "tap": "^15.1.6"
