@@ -74,7 +74,7 @@ If there are more than one separator, they are tested in the given order.
 Divides a Buffer into an array of n-sized chunks.<br />
 Throws an error if the given Buffer can not be divided.
 
-### `concat(buffers: Buffer[] | Uint8Array[], length?: number) : Uint8Array`
+#### `concat(buffers: Buffer[] | Uint8Array[], length?: number) : Uint8Array`
 
 Like Buffer.concat() but for Uint8Array.
 
