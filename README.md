@@ -1,7 +1,9 @@
 About
 =====
 
-Additional Buffer manipulation
+Additional Buffer|Uint8Array manipulation
+
+📦 Scoped `@xan105` packages are for my own personal use but feel free to use them.
 
 Example
 =======
@@ -31,23 +33,23 @@ API
 
 ## Named export
 
-#### `indexOfAny(buffer: Buffer, values: Buffer[], offset?: number): { pos: number, length: number }`
+#### `indexOfAny(buffer: Buffer | Uint8Array, values: Buffer[] | Uint8Array[], offset?: number): { pos: number, length: number }`
 
 Like `Buffer.indexOf()` but for one or more search values.
 
 Return the same value as `Buffer.indexOf()` and the length of the found value for convenience _(zero if not found)_.
 
-#### `lastIndexOfAny(buffer: Buffer, values: Buffer[], offset?: number): { pos: number, length: number }`
+#### `lastIndexOfAny(buffer: Buffer | Uint8Array, values: Buffer[] | Uint8Array[], offset?: number): { pos: number, length: number }`
 
 Like `Buffer.lastIndexOf()` but for one or more search values.
 
 Return the same value as `Buffer.lastIndexOf()` and the length of the found value for convenience _(zero if not found)_.
 
-#### `indexOfNthOccurrence(buffer: Buffer, search: Buffer, n: number): number`
+#### `indexOfNthOccurrence(buffer: Buffer | Uint8Array, search: Buffer | Uint8Array, n: number): number`
 
 Like `Buffer.indexOf()` but find the n-th occurence of the search value.
 
-#### `split(buffer: Buffer, separators: Buffer | Buffer[], option?: obj): Buffer[]`
+#### `split(buffer: Buffer | Uint8Array, separators: Buffer | Buffer[] | Uint8Array | Uint8Array[], option?: object): Buffer[] | Uint8Array[]`
 
 Divides a Buffer into an array of Buffer; split at each point where the separator occurs in the given Buffer.<br />
 This is _somehow similar_ to `String.split()` but for Buffer.
@@ -67,7 +69,16 @@ if separator is an empty Buffer _(i.e. zero length)_ then the returned array wil
 
 If there are more than one separator, they are tested in the given order.
 
-#### `splitIntoChuncks(buffer: Buffer, n: number): Buffer[]`
+#### `splitIntoChuncks(buffer: Buffer | Uint8Array, n: number): Buffer[] | Uint8Array[]`
 
 Divides a Buffer into an array of n-sized chunks.<br />
 Throws an error if the given Buffer can not be divided.
+
+### `concat(buffers: Buffer[] | Uint8Array[], length?: number) : Uint8Array`
+
+Like Buffer.concat() but for Uint8Array.
+
+Returns a new Uint8Array which is the result of concatenating the given Uint8Arrays together.<br />
+if length is 0, then a new zero-length Uint8Array is returned.<br />
+If length is not provided, it is calculated from the given Uint8Arrays.<br />
+If length is provided and the combined length of the given Uint8Arrays exceeds length, the result is truncated to length.<br />
